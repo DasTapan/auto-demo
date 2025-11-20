@@ -1,0 +1,23 @@
+version: 2.1
+
+orbs:
+  runbridge: aut-demo/runbridge@dev:alpha
+
+jobs:
+  trigger-remote-run:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: "Debug: show env"
+          command: |
+            echo "Testing runbridge orb (dev)"
+
+      - runbridge/run-bridge:
+          api_key: SEDSTART_API_KEY
+          project_id: "364"
+          test_id: "1629"
+          profile_id: "616"
+          browser: "chrome"
+          headless: true
+          environment: "QA"
