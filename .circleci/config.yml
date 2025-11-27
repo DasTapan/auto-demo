@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  runbridge: shinobi/runbridge@dev:beta-two
+  runbridge: shinobi/runbridge@dev:beta-four
 
 jobs:
   trigger-remote-run:
