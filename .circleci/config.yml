@@ -1,21 +1,27 @@
 version: 2.1
+
 orbs:
-  cicd: sedstart/cicd@dev:1
+  runbridge: shinobi/runbridge@dev:beta-four
+
 jobs:
-  test:
+  trigger-remote-run:
     docker:
-      - image: cimg/node:25.2.1
+      - image: cimg/node:20.18.0
     steps:
-      - cicd/runcloud:    
-          api_key: SEDSTART_API_KEY_PROD      
-          project_id: "364"
-          test_id: "1629"
-          profile_id: "616"
+      - run:
+          name: "Debug: show env"
+          command: |
+            echo "Testing runbridge orb (dev)"
+
+      - runbridge/run-bridge:
+          api_key: SEDSTART_API_KEY
+          project_id: 364
+          test_id: 1629
+          profile_id: 616
           browser: "chrome"
-          headless: false
+          headless: true
           environment: "QA"
-          
 workflows:
-  test-workflow:
+  run_tests:
     jobs:
-      - test
+      - trigger-remote-run
