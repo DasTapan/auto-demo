@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - sedstart/runcloud:
-          base_url: "https://sedstart.sedinqa.com/api/"
+          base_url: "http://cli.sedstart.com/latest"
           api_key: SEDSTART_API_KEY   # env var set in CircleCI project
 
 workflows:
