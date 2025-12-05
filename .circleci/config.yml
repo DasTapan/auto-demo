@@ -9,6 +9,12 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
+      - run:
+          name: Install Xvfb
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y xvfb
+
       - sedstart/runcloud:
           base_url: "http://cli.sedstart.com/latest"
           api_key: SEDSTART_API_KEY   # env var set in CircleCI project
