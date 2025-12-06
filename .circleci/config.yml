@@ -21,7 +21,6 @@ jobs:
           suite_id: 1629
           profile_id: 616
           browser: "chrome"
-          headless: true
           environment: "QA"
 
 workflows:
