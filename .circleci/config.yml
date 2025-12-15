@@ -38,8 +38,10 @@ jobs:
           profile_id: 616
           environment: "QA"
   run-sedstart-local-windows:
+    resource_class: 'windows.medium'
     machine:
-      image: windows-default
+      image: 'windows-server-2022-gui:current'
+      shell: 'powershell.exe -ExecutionPolicy Bypass'
     steps:
       - checkout
       - sedstart/runlocal-windows:
