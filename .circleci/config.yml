@@ -40,8 +40,8 @@ jobs:
   run-sedstart-local-windows:
     resource_class: 'windows.medium'
     machine:
-      image: 'windows-server-2022-gui:current'
-      shell: 'powershell.exe -ExecutionPolicy Bypass'
+      image: "windows-server-2022-gui:current"
+      shell: "powershell.exe -ExecutionPolicy Bypass"
     steps:
       - checkout
       - sedstart/runlocal-windows:
