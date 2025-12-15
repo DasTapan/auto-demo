@@ -50,8 +50,20 @@ jobs:
           test_id: 1629
           profile_id: 616
           environment: "QA"
+  run-sedstart-local-mac:
+    macos:
+      xcode: 16.4.0
+      resource_class: 'm4pro.medium'
+    steps:
+      - checkout
+      - sedstart/runlocal-mac:
+          api_key: SEDSTART_API_KEY
+          project_id: 364
+          test_id: 1629
+          profile_id: 616
+          environment: "QA"
 
 workflows:
   main:
     jobs:
-      - run-sedstart-local-windows
+      - run-sedstart-local-mac
