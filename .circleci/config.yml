@@ -30,7 +30,7 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install -y xvfb
-            sudo npx -y playwright install-deps firefox
+            sudo npx --yes playwright install --with-deps
 
       - sedstart/runlocal:
           api_key: SEDSTART_API_KEY 
