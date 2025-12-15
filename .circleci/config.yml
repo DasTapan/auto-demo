@@ -49,7 +49,7 @@ jobs:
           project_id: 364
           test_id: 1629
           profile_id: 616
-          browser: "firefox"
+          browser: "edge"
           environment: "QA"
   run-sedstart-local-mac:
     macos:
