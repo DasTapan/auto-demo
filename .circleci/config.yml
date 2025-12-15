@@ -29,15 +29,13 @@ jobs:
           name: Install Xvfb
           command: |
             sudo apt-get update
-            sudo apt-get install -y xvfb
-            sudo apt-get install -y firefox chromium-browser
+            npx --yes --package=playwright playwright install --with-deps
 
       - sedstart/runlocal:
           api_key: SEDSTART_API_KEY 
           project_id: 364
           test_id: 1629
           profile_id: 616
-          browser: "firefox"
           environment: "QA"
 
 workflows:
