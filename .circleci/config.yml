@@ -39,7 +39,7 @@ jobs:
           environment: "QA"
   run-sedstart-local-windows:
     machine:
-      image: windows-server-2022-gui:current
+      image: windows-default
     steps:
       - checkout
       - sedstart/runlocal-windows:
@@ -52,4 +52,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-linux
+      - run-sedstart-local-windows
