@@ -29,7 +29,6 @@ jobs:
           name: "Install Playwright"
           command: |
             sudo apt-get update
-            npx --yes --package=playwright@1.57.0 playwright install --with-deps
 
       - sedstart/runlocal:
           api_key: SEDSTART_API_KEY 
