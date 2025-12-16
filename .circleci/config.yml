@@ -63,9 +63,9 @@ jobs:
           test_id: 1629
           profile_id: 616
           environment: "QA"
-          browser: "webkit"
+          browser: "firefox"
 
 workflows:
   main:
     jobs:
-      - run-sedstart-local-windows
+      - run-sedstart-local-mac
