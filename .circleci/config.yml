@@ -50,7 +50,6 @@ jobs:
           test_id: 1629
           profile_id: 616
           environment: "QA"
-          browser: "msedge"
   run-sedstart-local-mac:
     macos:
       xcode: 16.4.0
