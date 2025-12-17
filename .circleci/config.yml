@@ -17,7 +17,6 @@ jobs:
           project_id: 364
           test_id: 1629
           profile_id: 616
-          browser: "chrome"
           environment: "QA"
           
   run-sedstart-local-linux:
