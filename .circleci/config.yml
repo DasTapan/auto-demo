@@ -49,7 +49,7 @@ jobs:
           project_id: 418
           test_id: 1937
           profile_id: 848
-          browser: 'firefox'
+          browser: 'chrome'
           environment: "QA"
           
   run-sedstart-local-mac:
