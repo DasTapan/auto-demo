@@ -64,7 +64,7 @@ jobs:
           test_id: 1937
           profile_id: 848
           environment: "QA"
-          browser: "webkit"
+          browser: "firefox"
 
 workflows:
   main:
