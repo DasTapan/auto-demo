@@ -40,7 +40,7 @@ jobs:
     resource_class: 'windows.medium'
     machine:
       image: "windows-server-2022-gui:current"
-      shell: "bash.exe"
+      shell: "powershell.exe -ExecutionPolicy Bypass"
     steps:
       - checkout
       - sedstart/runlocal:
