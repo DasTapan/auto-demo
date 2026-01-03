@@ -68,4 +68,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-linux
+      - run-sedstart-local-mac
