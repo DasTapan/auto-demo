@@ -35,6 +35,7 @@ jobs:
           test_id: 1629
           profile_id: 616
           environment: "QA"
+          headless: true
           
   run-sedstart-local-windows:
     resource_class: 'windows.medium'
@@ -68,4 +69,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-windows
+      - run-sedstart-local-linux
