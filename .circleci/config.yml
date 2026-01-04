@@ -62,6 +62,7 @@ jobs:
           api_key: SEDSTART_API_KEY
           project_id: 364
           test_id: 1629
+          suite_id: 316
           profile_id: 616
           environment: "QA"
           browser: "webkit"
