@@ -45,7 +45,6 @@ jobs:
           api_key: SEDSTART_API_KEY
           project_id: 364
           test_id: 1629
-          profile_id: 616
           browser: 'msedge'
           environment: "QA"
           
@@ -66,4 +65,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-mac
+      - run-sedstart-local-windows
