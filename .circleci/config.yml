@@ -56,7 +56,7 @@ jobs:
       - checkout
       - sedstart/runlocal:
           project_id: 364
-          suite_id: 316
+          test_id: 1629
           profile_id: 616
           environment: "QA"
           browser: "webkit"
@@ -65,4 +65,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-windows
+      - run-sedstart-local-mac
