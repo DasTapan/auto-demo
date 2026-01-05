@@ -14,6 +14,7 @@ jobs:
             echo "Testing sedstart-shinobi orb (dev)"
       - sedstart/runcloud:
           api_key: SEDSTART_API_KEY
+          test_id: 1629
           project_id: 364
           profile_id: 616
           environment: "QA"
@@ -28,8 +29,8 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install -y xvfb
-      - sedstart/runlocal:
-          api_key: SEDSTART_API_KEY 
+      - sedstart/runlocal: 
+          project_id: 364
           profile_id: 616
           test_id: 1629
           environment: "QA"
