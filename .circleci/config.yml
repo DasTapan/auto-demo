@@ -30,8 +30,8 @@ jobs:
             sudo apt-get install -y xvfb
       - sedstart/runlocal:
           api_key: SEDSTART_API_KEY 
-          project_id: 364
           profile_id: 616
+          test_id: 1629
           environment: "QA"
           
   run-sedstart-local-windows:
@@ -65,4 +65,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-mac
+      - run-sedstart-local-linux
