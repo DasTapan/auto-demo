@@ -31,7 +31,6 @@ jobs:
       - sedstart/runlocal:
           api_key: SEDSTART_API_KEY 
           project_id: 364
-          test_id: 1629
           profile_id: 616
           environment: "QA"
           
