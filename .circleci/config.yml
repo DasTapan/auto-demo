@@ -15,7 +15,7 @@ jobs:
       - sedstart/runcloud:
           api_key: SEDSTART_API_KEY
           test_id: 1937
-          project_id: 418
+          suite_id: 387
           profile_id: 848
           environment: "QA"
 
