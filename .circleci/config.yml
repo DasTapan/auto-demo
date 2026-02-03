@@ -14,12 +14,10 @@ jobs:
             echo "Testing sedstart-shinobi orb (dev)"
       - sedstart/runcloud:
           api_key: SEDSTART_API_KEY
-          project_id: 418
-          suite_id: 387
-          profile_id: 848
+          test_id: 1629
+          project_id: 364
+          profile_id: 616
           environment: "QA"
-
-          
   run-sedstart-local-linux:
     docker:
       - image: cimg/node:20.18.0
@@ -30,13 +28,12 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install -y xvfb
-      - cicd/runlocal:
+      - sedstart/runlocal: 
           api_key: SEDSTART_API_KEY
           project_id: 418
-          suite_id: 387
           profile_id: 848
+          test_id: 1937
           environment: "QA"
-          
   run-sedstart-local-windows:
     resource_class: 'windows.medium'
     machine:
@@ -44,28 +41,28 @@ jobs:
       shell: "powershell.exe -ExecutionPolicy Bypass"
     steps:
       - checkout
-      - cicd/runlocal:
+      - sedstart/runlocal:
           api_key: SEDSTART_API_KEY
-          project_id: 418
-          suite_id: 387
-          profile_id: 848
-          browser: chrome
+          project_id: 364
+          test_id: 1629
+          profile_id: 616
+          browser: 'msedge'
           environment: "QA"
-          
   run-sedstart-local-mac:
     macos:
       xcode: 16.4.0
       resource_class: 'm4pro.medium'
     steps:
       - checkout
-      - cicd/runlocal:
+      - sedstart/runlocal:
           api_key: SEDSTART_API_KEY
-          project_id: 418
-          test_id: 1937
-          profile_id: 848
+          project_id: 364
+          test_id: 1629
+          profile_id: 616
           environment: "QA"
           browser: "webkit"
 
+ 
 workflows:
   main:
     jobs:
