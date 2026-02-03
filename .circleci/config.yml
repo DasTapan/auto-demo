@@ -31,7 +31,7 @@ jobs:
       - sedstart/runlocal: 
           api_key: SEDSTART_API_KEY
           project_id: 418
-          profile_id: 848
+          suite_id: 387
           test_id: 1937
           environment: "QA"
   run-sedstart-local-windows:
@@ -66,4 +66,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-windows
+      - run-sedstart-local-linux
