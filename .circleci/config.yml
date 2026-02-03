@@ -13,10 +13,11 @@ jobs:
           command: |
             echo "Testing sedstart-shinobi orb (dev)"
       - cicd/runlocal:
-          api_key: ${{ secrets.SEDSTART_API_KEY }}
-          project_id: 612
-          test_id: 4880
-          profile_id: 1017
+          api_key: SEDSTART_API_KEY
+          project_id: 418
+          test_id: 1937
+          profile_id: 848
+          environment: "QA"
           
   run-sedstart-local-linux:
     docker:
@@ -67,4 +68,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-linux
+      - run-sedstart-cloud
