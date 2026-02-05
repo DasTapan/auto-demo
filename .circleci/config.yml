@@ -1,7 +1,7 @@
 version: 2.1
  
 orbs:
-  sedstart: shinobi/cicd@dev:one
+  cicd: sedstart/cicd@dev:1
  
 jobs:
   run-sedstart-cloud:
