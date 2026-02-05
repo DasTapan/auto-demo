@@ -12,7 +12,7 @@ jobs:
           name: "Debug: show env"
           command: |
             echo "Testing sedstart-shinobi orb (dev)"
-      - sedstart/runcloud:
+      - cicd/runcloud:
           api_key: SEDSTART_API_KEY
           test_id: 1629
           project_id: 364
@@ -28,7 +28,7 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install -y xvfb
-      - sedstart/runlocal: 
+      - cicd/runlocal: 
           api_key: SEDSTART_API_KEY
           project_id: 418
           suite_id: 387
