@@ -48,7 +48,7 @@ jobs:
           project_id: 364
           test_id: 1629
           profile_id: 616
-          browser: 'msedge'
+          browser: 'chrome'
           environment: "QA"
           
   run-sedstart-local-mac:
@@ -69,4 +69,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-mac
+      - run-sedstart-local-windows
