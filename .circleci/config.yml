@@ -14,9 +14,9 @@ jobs:
             echo "Testing sedstart-shinobi orb (dev)"
       - sedstart/runcloud:
           api_key: SEDSTART_API_KEY
-          test_id: 1629
-          project_id: 364
-          profile_id: 616
+          test_id: 1937
+          project_id: 418
+          profile_id: 848
           environment: "QA"
           
   run-sedstart-local-linux:
@@ -69,4 +69,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - run-sedstart-local-windows
+      - run-sedstart-cloud
